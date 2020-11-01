@@ -1,0 +1,130 @@
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+  
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+  
+body {
+  font-size: 1.6rem;
+}
+
+#root {
+  border-radius: .5rem;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, .5);
+  margin: 1rem auto 0 auto;
+  padding: 1.5rem 2rem 1.5rem 3rem;
+  width: 50%;
+}
+
+.ul {
+  list-style: none;
+}
+
+.li {
+  cursor: pointer;
+}
+
+.folder {
+  color: orange;
+}
+
+.file {
+  color: lightgrey;
+}
+
+.div {
+  border-radius: .5rem;
+  padding-left: .5rem;
+  position: relative;
+}
+
+.div:hover {
+  background: lightblue;
+}
+
+.span {
+  color: black;
+  display: inline;
+  margin-left: .5rem;
+  vertical-align: super;
+}
+
+.ul .ul {
+  display: none;
+}
+
+.li.open > .ul {
+  display: block;
+}
+
+.empty {
+  color: black;
+  font-style: italic;
+  font-size: 1.8rem;
+  cursor: text;
+}
+
+.context-menu {
+  position: absolute;
+  box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, .5);
+  background: white;
+  padding: 1.2rem;
+  display: none;
+}
+
+.context-menu.no-target {
+  color: gray;
+}
+
+.context-menu .item {
+  cursor: pointer;
+  padding: .3rem 1rem;
+}
+
+.context-menu .item:hover {
+  background: lightblue;
+}
+
+.context-menu.no-target .item:hover {
+  background: none;
+}
+
+.show {
+  display: block;
+}
+
+.context-menu:focus {
+  outline: none;
+}
+
+.file-folder {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.rename-input {
+  background: none;
+  border-radius: .2rem;
+  border: none;
+  box-shadow: 0 0 0 .2rem black;
+  display: inline;
+  font: 1.6rem 'libaration serif';
+  margin-left: .5rem;
+  outline: none;
+  padding: 0;
+  vertical-align: super;
+}
+
+.div.selected {
+  background: lightsteelblue;
+}
